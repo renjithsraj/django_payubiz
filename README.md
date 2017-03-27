@@ -23,14 +23,29 @@ be cool now you don't worry about the these things i have the solution for this.
   * the value should be one from ['production', 'test']
   
       `PAYMENT_MODE = "production" ` `default will be "test"`
+      
+* SUCCESS_URL
+  * the value should be one from ['production', 'test']
   
+      `PAYMENT_MODE = "production" ` `default will be "test"`
+      
+* FAILURE_URL
+  * the value should be one from ['production', 'test']
   
+      `PAYMENT_MODE = "production" ` `default will be "test"`
+      
+* FAILURE_URL
+  * the value should be one from ['production', 'test']
   
+      `PAYMENT_MODE = "production" ` `default will be "test"`
+      
+* MERCHANT_KEY
+  * the value should be one from ['production', 'test']
   
+      `PAYMENT_MODE = "production" ` `default will be "test"`
+      
+ * MERCHANT_SALT
+  * the value should be one from ['production', 'test']
   
-SUCCESS_URL
-FAILURE_URL
-FAILURE_URL
-MERCHANT_KEY
-MERCHANT_SALT
-czxczxczxc
+      `PAYMENT_MODE = "production" ` `default will be "test"`
+ 
