@@ -11,7 +11,26 @@ django_payubiz is wrapper for payubiz payment gateway for django based web appli
 
 be cool now you don't worry about the these things i have the solution for this.
 
-### step1
+### Step 1
 
 * Install django_payubiz from PYPI repository or clone the package from the [django_payubiz repo](https://github.com/renjithsraj/django_payubiz.git)
 
+    `pip install django_payubiz`
+
+### Step 2
+
+* PAYMENT_MODE
+  * the value should be one from ['production', 'test']
+  
+      `PAYMENT_MODE = "production" ` `default will be "test"`
+  
+  
+  
+  
+  
+SUCCESS_URL
+FAILURE_URL
+FAILURE_URL
+MERCHANT_KEY
+MERCHANT_SALT
+czxczxczxc
