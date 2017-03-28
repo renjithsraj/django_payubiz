@@ -1,7 +1,4 @@
 # Django Payubiz
-.. image:: https://travis-ci.org/tjelvar-olsson/tinyfasta.svg?branch=master
-   :target: https://travis-ci.org/tjelvar-olsson/tinyfasta
-   :alt: Travis CI build status (Linux)
 
 Python Package for PayuBiz Payment Gateway for Django Based Applications.
 
