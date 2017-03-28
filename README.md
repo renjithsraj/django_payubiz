@@ -2,6 +2,9 @@
 
 Python Package for PayuBiz Payment Gateway for Django Based Applications.
 
+### Developer ![#f03c15]
+dsadasd
+
 ## Lets Begins :seedling:
 
 django_payubiz is wrapper for payubiz payment gateway for django based web application. I can see the internet many of the developers are asking about following doubts.
@@ -72,7 +75,7 @@ be cool now you don't worry about the these things i have the solution for this.
               `CANCEL_URL = "www.example.com/cancel/" ` `default will be "http://127.0.0.1:8000/payubiz-cancel/"`
       
  ### Integration.
-                                                                                           (app) 
+ 
  django_payubiz integration in your project.Add following snippts in your views.py(project/home/views.py)
  
         `from payu_biz.views import make_transaction
@@ -100,7 +103,7 @@ be cool now you don't worry about the these things i have the solution for this.
         * udf1 - udf10 - Chumma(Just simply if you want to add any details you can add)
 
 
-### Images
+
 
 
  
