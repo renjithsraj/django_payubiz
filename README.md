@@ -1,4 +1,5 @@
 # Django Payubiz
+[![Build Status](https://travis-ci.org/renjithsraj/django_payubiz.svg?branch=master)](https://travis-ci.org/renjithsraj/django_payubiz)
 
 Python Package for PayuBiz Payment Gateway for Django Based Applications.
 
