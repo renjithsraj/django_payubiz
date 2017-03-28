@@ -71,4 +71,36 @@ be cool now you don't worry about the these things i have the solution for this.
           * Where to redirect while transaction got canceld
               `CANCEL_URL = "www.example.com/cancel/" ` `default will be "http://127.0.0.1:8000/payubiz-cancel/"`
       
+ ### Integration.
+                                                                                           (app) 
+ django_payubiz integration in your project.Add following snippts in your views.py(project/home/views.py)
+ 
+        `from payu_biz.views import make_transaction
+        `def home(request):
+            """ DO your stuffs here and create a dictionary (key,value pair) """
+             cleaned_data = {
+                    'txnid': "aaaaassss", 'amount': 450000, 'productinfo': "sample_produ",
+                    'firstname':"renjith", 'email': "renjithsraj@live.com", 'udf1': '', 
+                    'udf2': '', 'udf3': '', 'udf4': '', 'udf5': '', 'udf6': '', 'udf7': '', 
+                    'udf8': '', 'udf9': '', 'udf10': '','phone':"9746272610"
+                    }
+             """ Payment gate calling with provided data dict """       
+             return make_transaction(cleaned_data)
+             
+  #### Note
+  
+  The following keys must be there in your `cleaned_data` dict
+  
+        * txnid - Unique
+        * amount
+        * productinfo - small description
+        * firstname - user firstname
+        * email - user email id (Payu will send the transaction details with this mail)
+        * phone - 
+        * udf1 - udf10 - Chumma(Just simply if you want to add any details you can add)
+
+
+### Images
+
+
  
