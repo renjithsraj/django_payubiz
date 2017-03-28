@@ -3,7 +3,8 @@
 Python Package for PayuBiz Payment Gateway for Django Based Applications.
 
 ### Developer ![#f03c15]
-dsadasd
+
+These packages in the developement stage, its cool package for the payu payment gateway.
 
 ## Lets Begins :seedling:
 
@@ -101,9 +102,3 @@ be cool now you don't worry about the these things i have the solution for this.
         * email - user email id (Payu will send the transaction details with this mail)
         * phone - 
         * udf1 - udf10 - Chumma(Just simply if you want to add any details you can add)
-
-
-
-
-
- 
