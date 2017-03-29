@@ -1,5 +1,5 @@
 # Django Payubiz
-[![Build Status](https://travis-ci.org/renjithsraj/django_payubiz.svg?branch=master)](https://travis-ci.org/renjithsraj/django_payubiz)
+[![PyPI version](https://badge.fury.io/py/payu_biz.svg)](https://badge.fury.io/py/payu_biz) [![Build Status](https://travis-ci.org/renjithsraj/django_payubiz.svg?branch=master)](https://travis-ci.org/renjithsraj/django_payubiz)
 
 Python Package for PayuBiz Payment Gateway for Django Based Applications.
 
@@ -20,7 +20,7 @@ be cool now you don't worry about the these things i have the solution for this.
 
 * Install django_payubiz from PYPI repository or clone the package from the [django_payubiz repo](https://github.com/renjithsraj/django_payubiz.git)
 
-    `pip install django_payubiz`
+    `pip install payu_biz`
 
 ### Settings
 
