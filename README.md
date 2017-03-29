@@ -7,6 +7,15 @@ Python Package for PayuBiz Payment Gateway for Django Based Applications.
 
 These packages in the developement stage, its cool package for the payu payment gateway.
 
+demo application deployed in [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://djangopayubizdemo.herokuapp.com/)
+[home page only redirect to payment gateway, the result you can see in JSON format]
+sample credentials for payment
+    
+    Name on Card: Any name
+    Card Number: 5123456789012346
+    CVV: 123
+    Expiry Date: 05/2017
+
 ## Lets Begins :seedling:
 
 django_payubiz is wrapper for payubiz payment gateway for django based web application. I can see the internet many of the developers are asking about following doubts.
