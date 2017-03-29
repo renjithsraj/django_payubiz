@@ -3,10 +3,7 @@ import os
 from os.path import join, dirname, split
 from setuptools import setup
 
-LONG_DESCRIPTION = """
-Django Sauth is an easy to setup social authentication/registration
-mechanism with support for several auth providers.
-"""
+LONG_DESCRIPTION = """ payu_biz is wrapper for payubz payment gateway for django framework"""
 
 
 # def long_description():
@@ -20,7 +17,7 @@ mechanism with support for several auth providers.
 setup(
   name = 'payu_biz',
   packages = ['payu_biz'], # this must be the same as the name above
-  version = '1.1.0',
+  version = '1.1.1',
   description = LONG_DESCRIPTION,
   license='MIT',
   author = 'Renjith S Raj',
