@@ -1,5 +1,5 @@
 # Django Payubiz
-[![PyPI version](https://badge.fury.io/py/payu_biz.svg)](https://badge.fury.io/py/payu_biz) [![Build Status](https://travis-ci.org/renjithsraj/django_payubiz.svg?branch=master)](https://travis-ci.org/renjithsraj/django_payubiz)
+[![PyPI version](https://badge.fury.io/py/payu_biz.svg)](https://badge.fury.io/py/payu_biz) [![Build Status](https://travis-ci.org/renjithsraj/django_payubiz.svg?branch=master)](https://travis-ci.org/renjithsraj/django_payubiz) 
 
 Python Package for PayuBiz Payment Gateway for Django Based Applications.
 
