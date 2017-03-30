@@ -120,3 +120,16 @@ Note
     * email - user email id (Payu will send the transaction details with this mail)
     * phone - 
     * udf1 - udf10 - Chumma(Just simply if you want to add any details you can add)
+
+
+Methods 
+========
+1. Verify Payment
+2. Check Payment
+3. Capture Transaction
+4. Refund Transaction
+5. Cancel Transaction
+6. Cancel Refund Transaction
+7. Check Action Status
+
+More details : https://github.com/renjithsraj/django_payubiz/blob/master/README.md
