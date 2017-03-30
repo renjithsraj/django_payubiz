@@ -115,12 +115,12 @@ be cool now you don't worry about the these things i have the solution for this.
         
 ## Methods
 
-    * Verify Payment
-    * Check Payment
-    * Capture Transaction
-    * Refund Transaction
-    * Cancel Transaction
-    * Cancel Refund Transaction
-    * Check Action Status
+* Verify Payment
+* Check Payment
+* Capture Transaction
+* Refund Transaction
+* Cancel Transaction
+* Cancel Refund Transaction
+* Check Action Status
     
 ### Verify Payment
