@@ -112,3 +112,15 @@ be cool now you don't worry about the these things i have the solution for this.
         * email - user email id (Payu will send the transaction details with this mail)
         * phone - 
         * udf1 - udf10 - Chumma(Just simply if you want to add any details you can add)
+        
+## Methods
+
+    * Verify Payment
+    * Check Payment
+    * Capture Transaction
+    * Refund Transaction
+    * Cancel Transaction
+    * Cancel Refund Transaction
+    * Check Action Status
+    
+### Verify Payment
