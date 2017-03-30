@@ -5,7 +5,7 @@ from django.core.urlresolvers import reverse
 from django.views.decorators.csrf import csrf_exempt
 from payu_config import (merchant_key, mode,su_url, fu_url, cu_url)
 from payubiz import PayuBizTransactions as PayBz
-
+from payubiz import PayuPaymentTrasactionService as PayWTS
 
 def make_transaction(data):
     payu_biz = PayBz()
@@ -18,9 +18,6 @@ def make_transaction(data):
     payment_url = payu_biz.generate_payment_url()
     firstname = transaction_dict['firstname']
     surl,furl,curl = su_url, fu_url, cu_url
-
-
-    print "FSDfsdfsdfsdfsdfsdfsdf"
     return HttpResponse(
          """
             <html>
@@ -85,3 +82,9 @@ def payu_failure(request):
 def payu_cancel(request):
     """ We are in the Payu cancel mode"""
     return HttpResponse(json.dumps(request.POST),mimetype='application/json')
+
+def verify_payment(txnid):
+    v_p = PayWTS()
+    vp_p = v_p.verify_payment(txnid)
+    return vp_p
+
