@@ -102,8 +102,8 @@ be cool now you don't worry about the these things i have the solution for this.
              return make_transaction(cleaned_data)
              
   #### Note
-  
-  The following keys must be there in your `cleaned_data` dict
+  1. Please store the response data into database.[the package will update soon]
+  2.The following keys must be there in your `cleaned_data` dict
   
         * txnid - Unique
         * amount
@@ -113,7 +113,7 @@ be cool now you don't worry about the these things i have the solution for this.
         * phone - 
         * udf1 - udf10 - Chumma(Just simply if you want to add any details you can add)
         
-## Methods
+## Methods [  :pizza: ]
 
 * Verify Payment
 * Check Payment
@@ -123,4 +123,68 @@ be cool now you don't worry about the these things i have the solution for this.
 * Cancel Refund Transaction
 * Check Action Status
     
-### Verify Payment
+#### Verify Payment
+
+`from payu_biz.views import (make_transaction, verify_payment)
+ def home(request):
+    """ Do Stuffs """
+    txnid = "payu_biz82532"
+    vp = verify_payment(txnid)
+    print vp`
+    
+#### CheckPayment
+
+`from payu_biz.views import (make_transaction, check_payment)
+ def home(request):
+    """ Do Stuffs """
+    mihpayid = "403993715515865279" ## captured from make_transaction response 
+    cp = check_payment(mihpayid)
+    print cp `
+    
+#### Capture Transaction
+
+`from payu_biz.views.import (make_transaction, capture_transaction)
+ def home(request):
+    """ DO stuffs """
+    mihpayid = "403993715515865279" ## captured from make_transaction response 
+    ct = capture_transaction(mihpayid)
+    print ct`
+    
+#### Cancel Transaction
+
+`from payu_biz.views.import (make_transaction, cancel_transaction)
+ def home(request):
+    """ DO stuffs """
+    mihpayid = "403993715515865279" ## captured from make_transaction response 
+    amount = "450000.00"
+    ct = cancel_transaction(mihpayid,amount)
+    print ct`
+    
+#### Refund Transaction
+
+`from payu_biz.views.import (make_transaction, refund_transaction)
+ def home(request):
+    """ DO stuffs """
+    mihpayid = "403993715515865279" ## captured from make_transaction response 
+    amount = "450000.00"
+    ref_t = refund_transaction(mihpayid, amount)
+    print ref_t `
+
+#### Cancel Refund Transaction
+
+`from payu_biz.views.import (make_transaction, cancel_refund_transaction)
+ def home(request):
+    """ DO Stuffs """
+    mihpayid = "403993715515865279"
+    amount = "450000.00"
+    ct = cancel_refund_transaction(mihpayid, amount)
+    print ct `
+    
+#### Check Action Status
+
+`from payu_biz.views.import (maketransaction, cancel_refund_transaction, check_action_status)
+ This API is used to check the status of refund/cancel requests
+ def home(request):
+    request_id = "127403301"  # Pass the Cancel Refund Request ID
+    c_status = check_action_status(request_id)
+    print c_status`  
