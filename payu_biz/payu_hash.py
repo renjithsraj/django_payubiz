@@ -1,7 +1,6 @@
 from hashlib import sha512
 from payu_config import merchant_salt
 from payu_config import (required_params)
-from hashlib import sha512
 from uuid import uuid4
 
 KEYS = ('key', 'txnid', 'amount', 'productinfo', 'firstname', 'email',
@@ -10,9 +9,6 @@ KEYS = ('key', 'txnid', 'amount', 'productinfo', 'firstname', 'email',
 
 
 def generate_hash(data):
-    keys = ('key','txnid', 'amount', 'productinfo', 'firstname', 'email',
-            'udf1', 'udf2', 'udf3', 'udf4', 'udf5',  'udf6',  'udf7', 'udf8',
-            'udf9',  'udf10')
     hash = sha512('')
     for key in KEYS:
         hash.update("%s%s" % (str(data.get(key, '')), '|'))

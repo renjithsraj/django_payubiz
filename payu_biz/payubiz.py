@@ -25,7 +25,7 @@ class PayuBizTransactions(object):
     @classmethod
     def generate_payment_hash(cls,data):
         action = "makepayment_data_hash"
-        validate_hash_make_data = cls.validate_request_params(action, data)
+        cls.validate_request_params(action, data)
         hash_value = generate_hash(data)
         return hash_value
 
