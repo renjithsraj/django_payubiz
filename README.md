@@ -125,66 +125,66 @@ be cool now you don't worry about the these things i have the solution for this.
     
 #### Verify Payment
 
-`from payu_biz.views import (make_transaction, verify_payment)
- def home(request):
-    """ Do Stuffs """
-    txnid = "payu_biz82532"
-    vp = verify_payment(txnid)
-    print vp`
+    `from payu_biz.views import (make_transaction, verify_payment)
+     def home(request):
+        """ Do Stuffs """
+        txnid = "payu_biz82532"
+        vp = verify_payment(txnid)
+        print vp`
     
 #### CheckPayment
 
-`from payu_biz.views import (make_transaction, check_payment)
- def home(request):
-    """ Do Stuffs """
-    mihpayid = "403993715515865279" ## captured from make_transaction response 
-    cp = check_payment(mihpayid)
-    print cp `
+    `from payu_biz.views import (make_transaction, check_payment)
+     def home(request):
+        """ Do Stuffs """
+        mihpayid = "403993715515865279" ## captured from make_transaction response 
+        cp = check_payment(mihpayid)
+        print cp `
     
 #### Capture Transaction
 
-`from payu_biz.views.import (make_transaction, capture_transaction)
- def home(request):
-    """ DO stuffs """
-    mihpayid = "403993715515865279" ## captured from make_transaction response 
-    ct = capture_transaction(mihpayid)
-    print ct`
+    `from payu_biz.views.import (make_transaction, capture_transaction)
+     def home(request):
+        """ DO stuffs """
+        mihpayid = "403993715515865279" ## captured from make_transaction response 
+        ct = capture_transaction(mihpayid)
+        print ct`
     
 #### Cancel Transaction
 
-`from payu_biz.views.import (make_transaction, cancel_transaction)
- def home(request):
-    """ DO stuffs """
-    mihpayid = "403993715515865279" ## captured from make_transaction response 
-    amount = "450000.00"
-    ct = cancel_transaction(mihpayid,amount)
-    print ct`
+    `from payu_biz.views.import (make_transaction, cancel_transaction)
+     def home(request):
+        """ DO stuffs """
+        mihpayid = "403993715515865279" ## captured from make_transaction response 
+        amount = "450000.00"
+        ct = cancel_transaction(mihpayid,amount)
+        print ct`
     
 #### Refund Transaction
 
-`from payu_biz.views.import (make_transaction, refund_transaction)
- def home(request):
-    """ DO stuffs """
-    mihpayid = "403993715515865279" ## captured from make_transaction response 
-    amount = "450000.00"
-    ref_t = refund_transaction(mihpayid, amount)
-    print ref_t `
+    `from payu_biz.views.import (make_transaction, refund_transaction)
+     def home(request):
+        """ DO stuffs """
+        mihpayid = "403993715515865279" ## captured from make_transaction response 
+        amount = "450000.00"
+        ref_t = refund_transaction(mihpayid, amount)
+        print ref_t `
 
 #### Cancel Refund Transaction
 
-`from payu_biz.views.import (make_transaction, cancel_refund_transaction)
- def home(request):
-    """ DO Stuffs """
-    mihpayid = "403993715515865279"
-    amount = "450000.00"
-    ct = cancel_refund_transaction(mihpayid, amount)
-    print ct `
+    `from payu_biz.views.import (make_transaction, cancel_refund_transaction)
+     def home(request):
+        """ DO Stuffs """
+        mihpayid = "403993715515865279"
+        amount = "450000.00"
+        ct = cancel_refund_transaction(mihpayid, amount)
+        print ct `
     
 #### Check Action Status
 
-`from payu_biz.views.import (maketransaction, cancel_refund_transaction, check_action_status)
- This API is used to check the status of refund/cancel requests
- def home(request):
-    request_id = "127403301"  # Pass the Cancel Refund Request ID
-    c_status = check_action_status(request_id)
-    print c_status`  
+    `from payu_biz.views.import (maketransaction, cancel_refund_transaction, check_action_status)
+     This API is used to check the status of refund/cancel requests
+     def home(request):
+        request_id = "127403301"  # Pass the Cancel Refund Request ID
+        c_status = check_action_status(request_id)
+        print c_status`  
