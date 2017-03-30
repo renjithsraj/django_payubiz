@@ -1,15 +1,22 @@
-from payu_hash import generate_hash
-from payu_config import (required_params, mode, urls)
+from payu_hash import (generate_hash, get_webservice_hash)
+from payu_config import (required_params, mode, urls, merchant_key)
+import json
+from django.utils.http import urlencode
+from django.conf import settings
+from hashlib import sha512
+from uuid import uuid4
+try:
+    import urllib.request as urllib2
+except ImportError:
+    import urllib2
+
 
 class PayuBizTransactions(object):
-
     def __init__(self):
-        self.test = "test"
+        pass
 
     @staticmethod
     def validate_request_params(action,data):
-        print action
-        print required_params[action]
         action_required_params = required_params[action]
         for each_param in action_required_params:
             if not data.has_key(each_param) or data.get(each_param,None) in ['',None]:
@@ -20,10 +27,44 @@ class PayuBizTransactions(object):
         action = "makepayment_data_hash"
         validate_hash_make_data = cls.validate_request_params(action, data)
         hash_value = generate_hash(data)
-        print hash_value
         return hash_value
+
     @staticmethod
     def generate_payment_url():
         return urls[mode]
+
+    
+def webservice_url():
+    if mode.lower() == 'test':
+        url = 'https://test.payu.in/merchant/postservice.php?form=2'
+    elif mode.lower() == 'production':
+        url = 'https://info.payu.in/merchant/postservice.php?form=2'
+    else:
+        raise Exception("The Service Urls is not found for the Payment mode")
+    return url
+
+class PayuPaymentTrasactionService(PayuBizTransactions):
+    @staticmethod
+    def payu_post(params):
+        params = params
+        params['key'] = merchant_key
+        params['hash'] = get_webservice_hash(params)
+        url = webservice_url()
+        payload = urlencode(params)
+        request = urllib2.Request(url)
+        request.add_data(payload)
+        response = (urllib2.urlopen(request))
+        response = json.loads(response.read())
+        return response
+
+    def verify_payment(self,txnid):
+        params = {}
+        params['command'] = "verify_payment"
+        params['var1'] = txnid
+        verify_payment_data = self.payu_post(params)
+        return verify_payment_data
+
+
+   
 
 

@@ -3,12 +3,11 @@ from django.conf import settings
 
 required_params = { 'makepayment':('txnid', 'amount', 'productinfo', 'firstname', 'email', 'phone'),
                     'makepayment_data_hash':('key', 'txnid', 'amount', 'productinfo', 'firstname', 'email'),
-                    
+                    'webservice_key':('key', 'command', 'var1'),
 
 }
 
-urls = { 
-            "production":"https://secure.payu.in/_payment",
+urls = {    "production":"https://secure.payu.in/_payment",
             "test":"https://test.payu.in/_payment",
             "success_url":"http://127.0.0.1:8000/payubiz-success/",
             "cancel_url":"http://127.0.0.1:8000/payubiz-cancel/",
