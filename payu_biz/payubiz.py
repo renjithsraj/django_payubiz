@@ -44,6 +44,7 @@ def webservice_url():
     return url
 
 class PayuPaymentTrasactionService(PayuBizTransactions):
+    
     @staticmethod
     def payu_post(params):
         params = params
@@ -63,6 +64,56 @@ class PayuPaymentTrasactionService(PayuBizTransactions):
         params['var1'] = txnid
         verify_payment_data = self.payu_post(params)
         return verify_payment_data
+
+    def check_payment(self,mihpayid):
+        params = {}
+        params['command'] = "check_payment"
+        params['var1'] = mihpayid
+        check_payment_data = self.payu_post(params)
+        return check_payment_data
+
+    def capture_transaction(self,mihpayid):
+        params = {}
+        params['command'] = "capture_transaction"
+        params['var1'] = mihpayid
+        params['var2'] = uuid4().hex
+        capture_transaction_data = self.payu_post(params)
+        return capture_transaction_data
+
+    def cancel_transaction(self, mihpayid, amount):
+        params = {}
+        params['command'] = "cancel_transaction"
+        params['var1'] = mihpayid      # Pass the Payu id (mihpayid) of the transaction to capture.
+        params['var2'] = uuid4().hex   # token ID(unique token from merchant)
+        params['var3'] = amount
+        cancel_transaction_data = self.payu_post(params)
+        return cancel_transaction_data
+        
+    def refund_transaction(self,mihpayid, amount):
+        params = {}
+        params['command'] = "refund_transaction"
+        params['var1'] = mihpayid
+        params['var2'] = uuid4().hex
+        params['var3'] = amount
+        refund_transaction_data = self.payu_post(params)
+        return refund_transaction_data
+
+    def cancel_refund_transaction(self,mihpayid, amount):
+        params = {}
+        params['command'] = "cancel_refund_transaction"
+        params['var1'] = mihpayid
+        params['var2'] = uuid4().hex
+        params['var3'] = amount
+        cancel_refund_transaction_data = self.payu_post(params)
+        return cancel_refund_transaction_data
+
+    # This API is used to check the status of refund/cancel requests
+    def check_action_status(self,request_id):
+        params = {}
+        params['command'] = "check_action_status"
+        params['var1'] = request_id    # Pass the Cancel Refund Request ID.
+        check_action_status_data = self.payu_post(params)
+        return check_action_status_data
 
 
    

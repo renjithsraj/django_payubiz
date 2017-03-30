@@ -74,10 +74,12 @@ def make_transaction(data):
 def payu_success(request):
     """ we are in the payu success mode"""
     return HttpResponse(json.dumps(request.POST),mimetype='application/json')
+    
 @csrf_exempt
 def payu_failure(request):
     """ We are in payu failure mode"""
     return HttpResponse(json.dumps(request.POST),mimetype='application/json')
+
 @csrf_exempt
 def payu_cancel(request):
     """ We are in the Payu cancel mode"""
@@ -87,4 +89,38 @@ def verify_payment(txnid):
     v_p = PayWTS()
     vp_p = v_p.verify_payment(txnid)
     return vp_p
+
+def check_payment(mihpayid):
+    c_p = PayWTS()
+    cp_p = c_p.check_payment(mihpayid)
+    return cp_p
+
+def capture_transaction(mihpayid):
+    c_t = PayWTS()
+    ct_t = c_t.capture_transaction(mihpayid)
+    return ct_t
+
+def cancel_transaction(mihpayid, amount):
+    c_t = PayWTS()
+    ct_t = c_t.cancel_transaction(mihpayid, amount)
+    return ct_t
+
+
+def refund_transaction(mihpayid, amount):
+    r_t = PayWTS()
+    rt_t = r_t.refund_transaction(mihpayid, amount)
+    return rt_t
+
+def cancel_refund_transaction(mihpayid, amount):
+    cr_t = PayWTS()
+    cr_rt = cr_t.cancel_refund_transaction(mihpayid, amount)
+    return cr_rt
+
+def check_action_status(request_id):
+    ca_s = PayWTS()
+    ca_sd = ca_s.check_action_status(request_id)
+    return ca_sd
+
+
+
 
