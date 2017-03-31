@@ -11,6 +11,8 @@ These packages in the developement stage, its cool package for the payu payment 
 demo application deployed in [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://djangopayubizdemo.herokuapp.com/)
 [home page only redirect to payment gateway, the result you can see in JSON format]
 sample credentials for payment
+
+website : [Payment Gateway Payubiz](https://djangopackages.blogspot.in/2017/03/payu-payment-gateway-integration-in.html)
     
     Name on Card: Any name
     Card Number: 5123456789012346
