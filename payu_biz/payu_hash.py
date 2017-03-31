@@ -17,13 +17,13 @@ def generate_hash(data):
 
 
 
-def verify_hash(data, SALT):
-    keys.reverse()
-    hash = sha512(merchant_salt)
-    hash.update("%s%s" % ('|', str(data.get('status', ''))))
-    for key in KEYS:
-        hash.update("%s%s" % ('|', str(data.get(key, ''))))
-    return (hash.hexdigest().lower() == data.get('hash'))
+# def verify_hash(data, SALT):
+#     keys.reverse()
+#     hash = sha512(merchant_salt)
+#     hash.update("%s%s" % ('|', str(data.get('status', ''))))
+#     for key in KEYS:
+#         hash.update("%s%s" % ('|', str(data.get(key, ''))))
+#     return (hash.hexdigest().lower() == data.get('hash'))
 
 
 
