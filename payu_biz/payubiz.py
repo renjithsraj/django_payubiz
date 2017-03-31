@@ -5,6 +5,7 @@ from django.utils.http import urlencode
 from django.conf import settings
 from hashlib import sha512
 from uuid import uuid4
+from payu_config import (su_url, fu_url, cu_url)
 try:
     import urllib.request as urllib2
 except ImportError:
@@ -18,6 +19,12 @@ class PayuBizTransactions(object):
     @staticmethod
     def validate_request_params(action,data):
         action_required_params = required_params[action]
+        if su_url in (None,""):
+            raise Exception('%s is mandatory, Please Update settings.py' % ("SUCCESS_URL"))
+        if fu_url in (None, ""):
+            raise Exception('%s is mandatory, Please Update settings.py' % ("FAILURE_URL"))
+        if cu_url in (None, ""):
+            raise Exception('%s is mandatory, Please Update settings.py' % ("CANCEL_URL"))
         for each_param in action_required_params:
             if not data.has_key(each_param) or data.get(each_param,None) in ['',None]:
                 raise Exception('%s is mandatory' % (each_param))

@@ -15,18 +15,6 @@ def generate_hash(data):
     hash.update(merchant_salt)
     return hash.hexdigest().lower()
 
-
-
-# def verify_hash(data, SALT):
-#     keys.reverse()
-#     hash = sha512(merchant_salt)
-#     hash.update("%s%s" % ('|', str(data.get('status', ''))))
-#     for key in KEYS:
-#         hash.update("%s%s" % ('|', str(data.get(key, ''))))
-#     return (hash.hexdigest().lower() == data.get('hash'))
-
-
-
 def get_webservice_hash(data):
     # Generate hash sequence using the string sha512(key|command|var1|salt)
     hash_value = sha512(''.encode("utf-8"))

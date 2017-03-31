@@ -1,6 +1,6 @@
 """ The django version is 1.5.1 the imported function mauy varing depands on the versions"""
 import json, datetime, hashlib
-from django.http import HttpResponse,HttpResponseRedirect
+from django.http import HttpResponse
 from django.core.urlresolvers import reverse
 from django.views.decorators.csrf import csrf_exempt
 from payu_config import (merchant_key, mode,su_url, fu_url, cu_url)
@@ -10,7 +10,7 @@ from payubiz import PayuPaymentTrasactionService as PayWTS
 def make_transaction(data):
     payu_biz = PayBz()
     action = "makepayment"
-    validate_data = payu_biz.validate_request_params(action, data)
+    payu_biz.validate_request_params(action, data)
     transaction_dict = data.copy()
     phone_no = data.pop('phone')
     data['key'] = merchant_key
@@ -69,21 +69,6 @@ def make_transaction(data):
                                  )
         )
 
-
-@csrf_exempt
-def payu_success(request):
-    """ we are in the payu success mode"""
-    return HttpResponse(json.dumps(request.POST),mimetype='application/json')
-    
-@csrf_exempt
-def payu_failure(request):
-    """ We are in payu failure mode"""
-    return HttpResponse(json.dumps(request.POST),mimetype='application/json')
-
-@csrf_exempt
-def payu_cancel(request):
-    """ We are in the Payu cancel mode"""
-    return HttpResponse(json.dumps(request.POST),mimetype='application/json')
 
 def verify_payment(txnid):
     v_p = PayWTS()

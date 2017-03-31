@@ -62,7 +62,8 @@ be cool now you don't worry about the these things i have the solution for this.
     
         Add following parameters in the project settings.py(project/settings.py)
 
-        Note : For the Testing purpose you don't need to include these parameters in the projects.
+        Note : For the Testing purpose you don't need to include ['PAYMENT_MODE',
+        'MERCHANT_KEY','MERCHANT_SALT'] in the projects.
 
         * PAYMENT_MODE
           * The value should be one of the items from the list ['production', 'test']
@@ -78,19 +79,19 @@ be cool now you don't worry about the these things i have the solution for this.
 
         * SUCCESS_URL
           * Where to redirect while transaction is succeeded.
-              `SUCCESS_URL = "www.example.com/success/" ` `default will be "http://127.0.0.1:8000/payubiz-success/"`
+              `SUCCESS_URL = "www.example.com/success/" `
 
         * FAILURE_URL
           * Where to redirect while transaction got failure.
-              `FAILURE_URL = "www.example.com/failure/" ` `default will be "http://127.0.0.1:8000/payubiz-failure/"`
+              `FAILURE_URL = "www.example.com/failure/" `
 
         * CANCEL_URL
           * Where to redirect while transaction got canceld
-              `CANCEL_URL = "www.example.com/cancel/" ` `default will be "http://127.0.0.1:8000/payubiz-cancel/"`
+              `CANCEL_URL = "www.example.com/cancel/" `
       
  ### Integration.
  
- django_payubiz integration in your project.Add following snippts in your views.py(project/home/views.py)
+ django_payubiz integration in your project. Add following codes in your views.py(project/home/views.py)
  
         `from payu_biz.views import make_transaction
         `def home(request):
