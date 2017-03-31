@@ -1,4 +1,5 @@
-# Django Payubiz
+# Payubiz :credit_card:
+
 [![PyPI version](https://badge.fury.io/py/payu_biz.svg)](https://badge.fury.io/py/payu_biz) [![Build Status](https://travis-ci.org/renjithsraj/django_payubiz.svg?branch=master)](https://travis-ci.org/renjithsraj/django_payubiz) 
 
 Python Package for PayuBiz Payment Gateway for Django Based Applications.
@@ -113,7 +114,7 @@ be cool now you don't worry about the these things i have the solution for this.
         * phone - 
         * udf1 - udf10 - Chumma(Just simply if you want to add any details you can add)
         
-## Methods [  :pizza: ]
+## Methods :pizza:
 
 * Verify Payment
 * Check Payment
