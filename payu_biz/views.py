@@ -1,4 +1,3 @@
-import json
 from django.http import HttpResponse
 from payu_config import (merchant_key, su_url, fu_url, cu_url)
 from payubiz import PayuBizTransactions as PayBz
