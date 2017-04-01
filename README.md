@@ -48,15 +48,7 @@ be cool now you don't worry about the these things i have the solution for this.
                     'django.contrib.staticfiles',
                     'home',
                     'payu_biz' ## Package
-                )`
-                
-        * Include payu_biz urls in your project(project/urls.py)
-         
-              `urlpatterns = patterns('',
-                     # Examples:
-                    url(r'^$', 'home.views.home', name='home'),
-                    url(r'^', include('payu_biz.urls')),
-                    ) `
+                )``
         
     Step 2:
     
