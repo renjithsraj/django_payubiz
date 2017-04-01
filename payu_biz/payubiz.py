@@ -2,8 +2,6 @@ from payu_hash import (generate_hash, get_webservice_hash)
 from payu_config import (required_params, mode, urls, merchant_key)
 import json
 from django.utils.http import urlencode
-from django.conf import settings
-from hashlib import sha512
 from uuid import uuid4
 from payu_config import (su_url, fu_url, cu_url)
 try:

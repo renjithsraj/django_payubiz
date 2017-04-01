@@ -1,9 +1,6 @@
-""" The django version is 1.5.1 the imported function mauy varing depands on the versions"""
-import json, datetime, hashlib
+import json
 from django.http import HttpResponse
-from django.core.urlresolvers import reverse
-from django.views.decorators.csrf import csrf_exempt
-from payu_config import (merchant_key, mode,su_url, fu_url, cu_url)
+from payu_config import (merchant_key, su_url, fu_url, cu_url)
 from payubiz import PayuBizTransactions as PayBz
 from payubiz import PayuPaymentTrasactionService as PayWTS
 
@@ -12,7 +9,7 @@ def make_transaction(data):
     action = "makepayment"
     payu_biz.validate_request_params(action, data)
     transaction_dict = data.copy()
-    phone_no = data.pop('phone')
+    data.pop('phone')
     data['key'] = merchant_key
     hash_code = payu_biz.generate_payment_hash(data)
     payment_url = payu_biz.generate_payment_url()
