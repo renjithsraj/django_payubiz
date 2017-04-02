@@ -6,7 +6,7 @@ LONG_DESCRIPTION = """ payu payment gateway package for django"""
 setup(
   name = 'payu_biz',
   packages = ['payu_biz'], # this must be the same as the name above
-  version = '1.3.1',
+  version = '2.0',
   description = LONG_DESCRIPTION,
   license='MIT',
   author = 'Renjith S Raj',
