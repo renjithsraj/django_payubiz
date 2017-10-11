@@ -15,9 +15,9 @@ sample credentials for payment
 website : [Payment Gateway Payubiz](https://djangopackages.blogspot.in/2017/03/payu-payment-gateway-integration-in.html)
     
     Name on Card: Any name
-    Card Number: 5123456789012346
+    Card Number: 5100018609086541
     CVV: 123
-    Expiry Date: 05/2017
+    Expiry Date: 01/2020
 
 ## Lets Begins :seedling:
 
