@@ -1,6 +1,7 @@
 # Payubiz :credit_card:
 
 [![PyPI version](https://badge.fury.io/py/payu_biz.svg)](https://badge.fury.io/py/payu_biz) [![Build Status](https://travis-ci.org/Cadmus/django_payubiz.svg?branch=master)](https://travis-ci.org/renjithsraj/django_payubiz) [![Code Health](https://landscape.io/github/Cadmus/django_payubiz/master/landscape.svg?style=flat)](https://landscape.io/github/Cadmus/django_payubiz/master)
+[![Open Source Helpers](https://www.codetriage.com/cadmus/django_payubiz/badges/users.svg)](https://www.codetriage.com/cadmus/django_payubiz)
 
 Python Package for PayuBiz Payment Gateway for Django Based Applications.
 
