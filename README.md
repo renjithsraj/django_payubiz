@@ -1,4 +1,6 @@
 # PACKAGE IS DEPRECATED
+# Please visit the package PAYWIX
+(PAYWIX)[https://pypi.org/project/paywix/#description]
 
 #### I Have createing a common payment gateway wrapper for following payment gateways and ll update soon.
       * payu
